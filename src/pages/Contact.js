@@ -1,22 +1,28 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React from "react";
 
-const Contact = () => {
+function Contact() {
   return (
-    <>
-      <Header />
-      <main style={{ backgroundColor: '#f2f2f2', padding: '2rem 0' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2>ติดต่อเรา</h2>
-          <p>ที่อยู่: วิทยาลัยโปลิเทคนิคลานนา เชียงใหม่</p>
-          <p>โทรศัพท์: 053-123-456</p>
-          <p>อีเมล: info@lannapoly.ac.th</p>
+    <div className="container my-5">
+      <h1 className="text-center mb-4" data-aos="fade-up">
+        ติดต่อเรา
+      </h1>
+      <form>
+        <div className="mb-3" data-aos="fade-left">
+          <label htmlFor="name" className="form-label">ชื่อ</label>
+          <input type="text" id="name" className="form-control" placeholder="ชื่อของคุณ" />
         </div>
-      </main>
-      <Footer />
-    </>
+        <div className="mb-3" data-aos="fade-left">
+          <label htmlFor="email" className="form-label">อีเมล</label>
+          <input type="email" id="email" className="form-control" placeholder="อีเมลของคุณ" />
+        </div>
+        <div className="mb-3" data-aos="fade-left">
+          <label htmlFor="message" className="form-label">ข้อความ</label>
+          <textarea id="message" className="form-control" rows="4" placeholder="ข้อความของคุณ"></textarea>
+        </div>
+        <button type="submit" className="btn btn-primary" data-aos="zoom-in">ส่ง</button>
+      </form>
+    </div>
   );
-};
+}
 
 export default Contact;

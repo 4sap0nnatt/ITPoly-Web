@@ -1,16 +1,33 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <nav>
-      <ul style={{ display: 'flex', listStyle: 'none', gap: '1rem', padding: 0 }}>
-        <li><a href="/" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>หน้าหลัก</a></li>
-        <li><a href="/about" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>เกี่ยวกับเรา</a></li>
-        <li><a href="/courses" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>หลักสูตร</a></li>
-        <li><a href="/contact" style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold' }}>ติดต่อเรา</a></li>
-      </ul>
+    <nav className="navbar navbar-expand-lg">
+      <div className="container">
+        <Link className="navbar-brand" to="/">IT Department</Link>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Home</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About Us</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/courses">Courses</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
   );
-};
+}
 
 export default Navbar;

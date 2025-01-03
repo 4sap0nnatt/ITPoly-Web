@@ -1,0 +1,55 @@
+:root {
+    --primary-color: #FFD700; /* สีเหลือง */
+    --secondary-color: #000000; /* สีดำ */
+    --background-color: #f5f5f5; /* สีเทาอ่อน */
+    --text-color: #333333; /* สีเทาเข้ม */
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: var(--secondary-color);
+  }
+  
+  .navbar-brand, .nav-link {
+    color: var(--primary-color) !important;
+  }
+  
+  .nav-link:hover {
+    color: var(--background-color) !important;
+  }
+  
+  /* Button */
+  .btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: #e6c200; /* สีเหลืองเข้ม */
+    border-color: #e6c200;
+    color: var(--background-color);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  /* General Background */
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  .card {
+    border: 1px solid var(--primary-color);
+  }
+  
+  .card-title {
+    color: var(--primary-color);
+  }
+  

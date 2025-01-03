@@ -1,24 +1,31 @@
-import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React from "react";
 
-const Courses = () => {
+function Courses() {
   return (
-    <>
-      <Header />
-      <main style={{ padding: '2rem 0', backgroundColor: '#f9f9f9' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <h2>หลักสูตร</h2>
-          <ul style={{ listStyle: 'square', marginLeft: '1.5rem' }}>
-            <li>หลักสูตรปริญญาตรี</li>
-            <li>หลักสูตรประกาศนียบัตรวิชาชีพ</li>
-            <li>หลักสูตรระยะสั้น</li>
-          </ul>
+    <div className="container my-5">
+      <h1 className="text-center mb-4" data-aos="fade-up">
+        หลักสูตรของเรา
+      </h1>
+      <div className="row">
+        <div className="col-md-6" data-aos="flip-left">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">ประกาศนียบัตรวิชาชีพ</h5>
+              <p className="card-text">เรียนรู้ทักษะพื้นฐานในด้านไอทีและเทคโนโลยี</p>
+            </div>
+          </div>
         </div>
-      </main>
-      <Footer />
-    </>
+        <div className="col-md-6" data-aos="flip-left">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">ประกาศนียบัตรวิชาชีพชั้นสูง</h5>
+              <p className="card-text">พัฒนาความรู้และเตรียมพร้อมสำหรับการทำงาน</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
-};
+}
 
 export default Courses;
